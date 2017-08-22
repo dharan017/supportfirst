@@ -1,38 +1,69 @@
+@include fontFace("HelveticaThin", fonts/HelveticaThin, normal);
+@include fontFace("Montserrat", fonts/montserrat-light, normal);
 body {
     background: $mainBackground;
     color: $textColor;    
     padding-top: 50px;
-    @font-face{ 
-        font-family: 'HelveticaThin';
-        src: url('helvetica_neue_ce_35_thin-webfont.eot');
-        src: url('helvetica_neue_ce_35_thin-webfont.eot?#iefix') format('embedded-opentype'),
-            url('helvetica_neue_ce_35_thin-webfont.woff') format('woff'),
-            url('helvetica_neue_ce_35_thin-webfont.ttf') format('truetype'),
-            url('helvetica_neue_ce_35_thin-webfont.svg#webfont') format('svg');
-    }    
+    font-size: $globalFontSize;    
+    font-family: $bodyText;
+    font-weight: normal;
     &.login {
         background-image: url('../images/loginBg.jpg');
-        background-size: 77% 100%;                             
+        background-size: 75% 100%;                             
         background-repeat: no-repeat;       
         min-height: 100vh; 
         background-color: $white;
-        padding-top: 13%;
+        padding-top: 12%;
         form {
-            padding-left: 70px;
+            padding: 0 25px 0 68px;
+        }
+        .pt-3 {
+            padding-top: 0;
         }
         h3, h1 {
             font-family: $heading;
-            color: $white;
-            font-weight: 200;
-            font-variant: normal;
+            color: $white;            
+        }
+        h3 {
+            font-size: 36px;
+        }
+        h1 {
+            font-size: 60px;
         }
         p {
             color: $white;
         }
+        .input-group .form-control {
+            border-left: 0;
+        }
+        .btn {
+            background: #0d267c;
+            border: 1px solid #0d267c;
+            font-size: 17px;
+        }
+        .btn-primary:focus {
+            box-shadow: none;
+        }
+        .loginIcon {
+            width: 25px;
+            fill: #d7d7d7; 
+            path {
+                fill: red;
+            }
+        }
+    }
+    .form-control {
+        border: $fieldBorder;
+        font-size: inherit;
     }
     .form-control, .btn {
         @include border-radius(0);
     }
+    .input-group-addon {
+        border: $fieldBorder;
+        @include border-radius(0);
+        background: none;
+    }    
     .np {
         padding: 0;
     }
