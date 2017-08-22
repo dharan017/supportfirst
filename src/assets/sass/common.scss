@@ -35,6 +35,7 @@ body {
         }
         .input-group .form-control {
             border-left: 0;
+            padding-left: 0;
         }
         .btn {
             background: #0d267c;
@@ -46,10 +47,6 @@ body {
         }
         .loginIcon {
             width: 25px;
-            fill: #d7d7d7; 
-            path {
-                fill: red;
-            }
         }
     }
     .form-control {
